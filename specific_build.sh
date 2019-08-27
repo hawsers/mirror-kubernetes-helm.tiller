@@ -13,7 +13,7 @@ target_repository="${TARGET_REPOSITORY}"
 # My docker hub Repository
 mirror_repository="hawsers/${MIRROR_NAME}"
 
-target_tags=(`curl -k -s -X GET https://gcr.io/v2/google_containers/${target_repository}/tags/list | jq -r '.tags[] | @sh'`)
+target_tags=(`curl -k -s -X GET https://gcr.io/v2/${target_repository}/tags/list | jq -r '.tags[] | @sh'`)
 
 # docker hub return paginated result
 mirrored_tags=()
