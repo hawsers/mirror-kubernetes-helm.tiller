@@ -65,7 +65,7 @@ for i in "${missing_tags[@]}"; do
     #     continue
     # else
         if [ $limitTrigger -gt 0 ]; then
-            echo "FROM k8s.gcr.io/${target_repository}:${i//\'}" > Dockerfile
+            echo "FROM gcr.io/${target_repository}:${i//\'}" > Dockerfile
             git commit -a -m ${i//\'} --allow-empty
 
             git tag -f -a ${i//\'} -m "Auto Tag:${i//\'}"
