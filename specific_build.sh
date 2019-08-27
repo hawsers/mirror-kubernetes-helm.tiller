@@ -5,13 +5,13 @@
 # TARGET_REPOSITORY
 # API_TOKEN
 
-set -ex
+set -e
 
 # Monitor Repository
 target_repository="${TARGET_REPOSITORY}"
 
 # My docker hub Repository
-mirror_repository="hawsers/${target_repository}"
+mirror_repository="hawsers/${MIRROR_NAME}"
 
 target_tags=(`curl -k -s -X GET https://gcr.io/v2/google_containers/${target_repository}/tags/list | jq -r '.tags[] | @sh'`)
 
@@ -52,7 +52,7 @@ git status
 
 # reAttach for Travis-CI
 git remote rm origin
-git remote add origin https://hawsers:${API_TOKEN}@github.com/hawsers/mirror-${target_repository}.git
+git remote add origin https://hawsers:${API_TOKEN}@github.com/hawsers/mirror-${MIRROR_NAME}.git
 git remote -v
 
 git checkout master

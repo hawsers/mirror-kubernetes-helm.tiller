@@ -1,4 +1,4 @@
 sudo: required
 
 script:
-  - bash ./build.sh
+  - bash ./specific_build.sh
