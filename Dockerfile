@@ -1,1 +1,1 @@
-FROM gcr.io/kubernetes-helm/tiller:canary
+FROM gcr.io/kubernetes-helm/tiller:test-release
