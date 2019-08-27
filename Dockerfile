@@ -1,1 +1,1 @@
-FROM gcr.io/kubernetes-helm/tiller:v2.0.0-alpha.5
+FROM gcr.io/kubernetes-helm/tiller:v2.0.0-beta.1
