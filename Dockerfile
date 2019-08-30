@@ -1,1 +1,1 @@
-FROM gcr.io/kubernetes-helm/tiller:v2.2.3
+FROM gcr.io/kubernetes-helm/tiller:v2.3.0
